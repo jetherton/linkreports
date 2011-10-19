@@ -3,8 +3,10 @@
 
 $().ready(function() {
 	$("#linkreport").autocomplete("<?php echo url::base();?>admin/linkreports/search", {
-		width: 260,
-		selectFirst: false
+		width: 560,
+		selectFirst: false,
+		cacheLength: 1000,
+		max: 100
 	});
 	
 	$("#linkreport").result(function(event, data, formatted) {
