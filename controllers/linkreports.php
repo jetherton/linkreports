@@ -6,26 +6,18 @@
  * @package	   Link Reports
  */
 
-class Linkreports_Controller extends Admin_Controller
+class Linkreports_Controller extends Template_Controller
 {
+   public $auto_render = FALSE;
 
-	function __construct()
-	{
-		parent::__construct();
-		$this->template->this_page = 'settings';
-
-		// If this is not a super-user account, redirect to dashboard
-		if(!$this->auth->logged_in('admin') && !$this->auth->logged_in('superadmin'))
-		{
-			url::redirect('admin/dashboard');
-		}
-	}
-	
-	public function delete_link($id=false)
-	{
-	}//end index method
-	
-	
+    // Main template
+    public $template = '';
+    
+  	public function __construct()
+    {
+        parent::__construct();    
+    }
+    
 	public function search()
 	{
 		//turn off the template stuff
@@ -50,5 +42,4 @@ class Linkreports_Controller extends Admin_Controller
 		}
 	}
 
-	
 }

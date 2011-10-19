@@ -2,7 +2,7 @@
 <script type="text/javascript">
 
 $().ready(function() {
-	$("#linkreport").autocomplete("<?php echo url::base();?>admin/linkreports/search", {
+	$("#linkreport").autocomplete("<?php echo url::base();?>linkreports/search", {
 		width: 560,
 		selectFirst: false,
 		cacheLength: 1000,
