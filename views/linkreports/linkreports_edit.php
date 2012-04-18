@@ -79,7 +79,7 @@ function removeLinkToReport(id)
 		$incident = ORM::factory("incident")
 			->where("id", $link->from_incident_id)
 			->find();
-		echo '<li><a href="'.url::base().'reports/view/'.$incident->id.'">'.$incident->incident_title.'<a/></li>';
+		echo '<li><a href="'.url::base().'admin/reports/edit/'.$incident->id.'">'.$incident->incident_title.'<a/></li>';
 	}
 ?>
 </ul>
